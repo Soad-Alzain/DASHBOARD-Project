@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HOMEWORK 8 - Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <!-- FontAwesome CDN (Use this or your working local file) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section class="container-fluid min-vh-100 p-0" style="background-color: rgb(77, 90, 87);">
+        <div class="row g-0 min-vh-100">
+            
+            <!-- SIDEBAR COLUMN (col-2) -->
+            <div class="col-12 col-md-2 text-light bg-dark p-3 d-flex flex-column justify-content-between">
+                <div>
+                    <!-- Logo / Avatars -->
+                    <div class="text-center mb-4">
+                        <img src="p.png" alt="Profile" class="img-fluid w-25 mx-1 mt-3">
+                        <img src="p.png" alt="Profile" class="img-fluid w-25 mx-1 mt-3">
+                    </div>
+
+                    <p class="text-secondary small fw-bold tracking-wider px-2">ACTIVITY</p>
+
+                    <!-- Accordion Menu -->
+                    <div class="accordion accordion-flush" id="sidebarMenu">
+                        
+                        <!-- Dashboard Item -->
+                        <div class="accordion-item text-light bg-dark border-0">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed text-light bg-dark shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#one">
+                                    <i class="fa-solid fa-house text-secondary me-2"></i> DASHBOARD
+                                </button>
+                            </h3>
+                            <div id="one" class="accordion-collapse collapse" data-bs-parent="#sidebarMenu">
+                                <div class="list-group list-group-flush">
+                                    <a href="#" class="list-group-item list-group-item-action text-light bg-dark border-0 ps-4">10,000 - 30,000</a>
+                                    <a href="#" class="list-group-item list-group-item-action text-light bg-dark border-0 ps-4">30,000 - 60,000</a>
+                                    <a href="#" class="list-group-item list-group-item-action text-light bg-dark border-0 ps-4">60,000 - 90,000</a>
+                                    <a href="#" class="list-group-item list-group-item-action text-light bg-dark border-0 ps-4">More than 90,000</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Deposit Item -->
+                        <div class="accordion-item text-light bg-dark border-0">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed text-light bg-dark shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#two">
+                                    <i class="fa-solid fa-wallet text-secondary me-2"></i> DEPOSIT
+                                </button>
+                            </h3>
+                            <div id="two" class="accordion-collapse collapse" data-bs-parent="#sidebarMenu">
+                                <div class="list-group list-group-flush">
+                                    <a href="#" class="list-group-item list-group-item-action text-light bg-dark border-0 ps-4">Toshiba</a>
+                                    <a href="#" class="list-group-item list-group-item-action text-light bg-dark border-0 ps-4">HP</a>
+                                    <a href="#" class="list-group-item list-group-item-action text-light bg-dark border-0 ps-4">Dell</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="text-secondary small fw-bold tracking-wider px-2 mt-4">TRANSACTIONS</p>
+
+                        <!-- Withdrawals Item -->
+                        <div class="accordion-item text-light bg-dark border-0">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed text-light bg-dark shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#fore">
+                                    <i class="fa-solid fa-money-bill-transfer text-secondary me-2"></i> WITHDRAWALS
+                                </button>
+                            </h3>
+                            <div id="fore" class="accordion-collapse collapse" data-bs-parent="#sidebarMenu">
+                                <div class="list-group list-group-flush">
+                                    <a href="#" class="list-group-item list-group-item-action text-light bg-dark border-0 ps-4">Toshiba</a>
+                                    <a href="#" class="list-group-item list-group-item-action text-light bg-dark border-0 ps-4">HP</a>
+                                    <a href="#" class="list-group-item list-group-item-action text-light bg-dark border-0 ps-4">Dell</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Bottom Sidebar Actions (Logout) -->
+                <div class="pt-3 border-top border-secondary mt-auto">
+                    <button class="btn btn-warning w-100 rounded-pill">Logout</button>
+                </div>
+            </div>
+
+            <!-- MAIN CONTENT COLUMN (col-10) -->
+            <div class="col-12 col-md-10 p-4" style="background-color: rgb(39, 62, 55);">
+                
+                <!-- Navbar -->
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3 rounded mb-4">
+                    <div class="container-fluid">
+                        <div class="ms-auto d-flex align-items-center gap-2">
+                            <button class="btn btn-info btn-sm text-dark"><i class="fa-solid fa-plus me-1"></i>Add Funds</button>
+                            <button class="btn btn-info btn-sm text-dark"><i class="fa-solid fa-minus me-1"></i>Withdraw</button>
+                            
+                            <!-- User Dropdown -->
+                            <div class="dropdown ms-2">
+                                <button class="btn btn-dark text-light dropdown-toggle btn-sm" type="button" data-bs-toggle="dropdown">
+                                    <i class="fa-solid fa-user me-1 text-white"></i> Abdullah
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
+                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-user me-2 text-white"></i>Abdullah Ahamed</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-phone me-2 text-white"></i>09000000</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-envelope" style="margin-right: 8px;"></i>abdullah@gmail.com</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+
+                <!-- Page Header -->
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h1 class="text-light m-0">DASHBOARD</h1>
+                    <button class="btn btn-dark">Support</button>
+                </div>
+
+                <!-- Alert System -->
+                <div class="alert alert-info alert-dismissible fade show" role="alert">
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    <a href="#" class="alert-link text-decoration-none">Congrats!</a> You need to deposit to make your first trade. <a href="#" class="alert-link text-decoration-underline">Deposit Now</a>
+                </div>
+
+                <div class="alert alert-warning alert-dismissible fade show text-dark" role="alert">
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    <a href="#" class="alert-link text-decoration-none fw-bold">Account Incident!</a> Please upload your ID verification documents. <span class="badge bg-danger ms-2">Upload ID</span>
+                </div>
+
+                <!-- Stats Grid Section -->
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 text-light mt-2">
+                    <div class="col"><div class="p-3 bg-dark rounded shadow-sm">0$ Balance</div></div>
+                    <div class="col"><div class="p-3 bg-dark rounded shadow-sm">0$ Bonus Acct</div></div>
+                    <div class="col"><div class="p-3 bg-dark rounded shadow-sm">0$ Total Withdraw</div></div>
+                    <div class="col">
+                        <div class="p-3 bg-dark rounded shadow-sm">
+                            0$ Traded <span class="badge bg-danger ms-2">No Connection</span>
+                        </div>
+                    </div>
+                    <div class="col"><div class="p-3 bg-dark rounded shadow-sm">Standard Activity Plans</div></div>
+                    <div class="col">
+                        <div class="p-3 bg-dark rounded shadow-sm">
+                            Account status: <span class="text-warning fw-bold">INACTIVE</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div> <!-- End of Main Content Column -->
+        </div> <!-- End of Grid Row -->
+    </section>
+
+    <!-- Floating Chat Sticky Button -->
+    <button class="btn btn-info fixed-bottom m-4 rounded-pill px-4 shadow-lg text-white" style="left: auto; right: 20px; width: auto; max-width: 200px;">
+        <i class="fa-solid fa-user me-2"></i>Chat
+    </button>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="bootstrap.bundle.min.js"></script>
+</body>
+</html>
